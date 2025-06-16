@@ -1,0 +1,178 @@
+body {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+@font-face {
+  font-family: LeowB;
+  src: url(./Assets/Fonts/Leow/Loew-Bold-1.otf);
+}
+@font-face {
+  font-family: LeowB2;
+  src: url(./Assets/Fonts/Leow/Loew-Bold-1.otf);
+}
+@font-face {
+  font-family: LeowM;
+  src: url(./Assets/Fonts/Leow/Loew-Medium.otf);
+}
+@font-face {
+  font-family: LeowL;
+  src: url(./Assets/Fonts/Leow/Loew-Light.otf);
+}
+@font-face {
+  font-family: LeowLI;
+  src: url(./Assets/Fonts/Leow/Loew-LightItalic.otf);
+}
+@font-face {
+  font-family: CairoM;
+  src: url(./Assets/Fonts/Cairo/Cairo-Medium.ttf);
+}
+@font-face {
+  font-family: CairoL;
+  src: url(./Assets/Fonts/Cairo/Cairo-Light.ttf);
+}
+/* For WebView */
+:root {
+  /*  */
+  /* Colors */
+  --color-primary: #3e5636;
+  --color-secondary: #db952e;
+  --color-gray: #bcbec0;
+  --color-white: #ffffff;
+  --color-BG-primary: var(--halftone-2, #3e5636);
+  --color-BG-secondary: var(--halftone-2, #ffffff);
+  /*  */
+  /* Fonts Size */
+  /* Font Sizes (Default) */
+  --font-16px: 1.13vw; /* 16px */
+  --font-20px: 1.42vw; /* 20px */
+  --font-24px: 1.704vw; /* 24px */
+  --font-32px: 2.272vw; /* 32px */
+  --font-48px: 3.408vw; /* 48px */
+  /*  */
+  /*  */
+  /* Space */
+  /* GapBetween Sections  */
+  --PMGR-4px: 0.284vw;
+  --PMGR-8px: 0.568vw;
+  --PMGR-16px: 1.31vw;
+  --PMGR-20px: 1.42vw;
+  --PMGR-24px: 1.704vw;
+  --PMGR-28px: 1.988vw;
+  --PMGR-32px: 2.272vw;
+  --PMGR-40px: 2.84vw;
+  --PMGR-48px: 3.408vw;
+  --PMGR-64px: 4.554vw;
+  --PMGR-108px: 7.7vw;
+  --PMGR-128px: 9.088vw;
+}
+
+.FLeowB16pxFW7 {
+  font-family: LeowB;
+  font-size: var(--font-16px);
+  font-style: normal;
+  font-weight: 700;
+  line-height: 150.023%; /* 24.004px */
+}
+.FLeowB20pxFW7 {
+  font-family: LeowB;
+  font-size: var(--font-20px);
+  font-style: normal;
+  margin-top: 0;
+  font-weight: 700;
+  line-height: normal;
+}
+.FLeowB24pxFW7 {
+  font-family: LeowB;
+  font-size: var(--font-24px);
+  font-style: normal;
+  font-weight: 700;
+  line-height: 150.023%; /* 24.004px */
+}
+.FLeowB32pxFW7 {
+  font-family: LeowB;
+  font-size: var(--font-32px);
+  font-style: normal;
+  margin-top: 0;
+  font-weight: 700;
+  line-height: normal;
+}
+/*  */
+/*  */
+/*  */
+/*  */
+.FLeowL16pxFW4 {
+  font-family: LeowL;
+  font-size: var(--font-16px);
+  font-style: normal;
+  font-weight: 400;
+  line-height: 150.023%;
+}
+.FLeowL20pxFW4 {
+  font-family: LeowL;
+  font-size: var(--font-20px);
+  font-style: normal;
+  font-weight: 400;
+  line-height: 150.023%;
+}
+.FLeowL24pxFW4 {
+  font-family: LeowL;
+  font-size: var(--font-24px);
+  font-style: normal;
+  font-weight: 700;
+  line-height: 160%;
+}
+.FLeowL28pxFW4 {
+  font-family: LeowL;
+  font-size: var(--font-28px);
+  font-style: normal;
+  font-weight: 700;
+  line-height: 160%;
+}
+.FLeowL32pxFW4 {
+  font-family: LeowL;
+  font-size: var(--font-32px);
+  font-style: normal;
+  font-weight: 700;
+  line-height: 160%;
+}
+/* For MobView */
+@media (max-width: 768px) {
+  :root {
+    /*  */
+    /* Colors */
+    --color-primary: #3e5636;
+    --color-secondary: #db952e;
+    --color-gray: #bcbec0;
+    --color-white: #ffffff;
+    --color-BG-primary: var(--halftone-2, #3e5636);
+    --color-BG-secondary: var(--halftone-2, #ffffff);
+    /*  */
+    /* Fonts Size */
+    /* Font Sizes (Default) */
+    --font-16px: 3.712vw; /* 16px */
+    --font-20px: 4.64vw; /* 20px */
+    --font-24px: 5.56vw; /* 24px */
+    --font-32px: 7.424vw; /* 32px */
+    --font-48px: 11.136vw; /* 48px */
+    /*  */
+    /*  */
+    /* Space */
+    /* GapBetween Sections  */
+    --PMGR-4px: 0.928vw;
+    --PMGR-8px: 1.856vw;
+    --PMGR-16px: 3.712vw;
+    --PMGR-20px: 4.64vw;
+    --PMGR-24px: 5.56vw;
+    --PMGR-28px: 6.496vw;
+    --PMGR-32px: 7.424vw;
+    --PMGR-40px: 9.28vw;
+    --PMGR-48px: 11.136vw;
+    --PMGR-64px: 14.848vw;
+    --PMGR-108px: 25vw;
+    --PMGR-128px: 29.696vw;
+  }
+}

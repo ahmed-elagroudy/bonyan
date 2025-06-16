@@ -1,0 +1,123 @@
+.ContactC {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--PMGR-48px);
+  padding-bottom: var(--PMGR-40px);
+}
+
+.ContS1 img {
+  width: 100%;
+}
+.ContS1 .ContS1ImgC {
+  position: relative;
+  width: 100%;
+}
+.OverlayText {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-size: var(--font-48px);
+  font-weight: bold;
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.7);
+  text-align: center;
+  z-index: 1;
+}
+.ContactCardsWrapper {
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  justify-content: space-between;
+  padding: var(--PMGR-40px) var(--PMGR-20px);
+  width: 85vw;
+}
+
+.ContS1Card {
+  background: white;
+  padding: var(--PMGR-20px);
+  border-radius: var(--PMGR-28px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+  width: 18vw;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.ContS1Card .CS1CIcon {
+  width: 4vw;
+  margin-bottom: 10px;
+}
+
+.ContS1Card .CS1CTitle {
+  font-weight: bold;
+  color: var(--color-secondary);
+}
+
+.ContS1Card .CS1Content {
+  color: var(--color-primary);
+  font-family: LeowB2;
+}
+
+.ContS1Card a {
+  text-decoration: underline;
+}
+.ContS2 {
+  padding-top: 10vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--PMGR-20px);
+}
+.CP2P1 {
+  color: var(--color-primary);
+  text-align: center;
+}
+.CP2P2 {
+  width: 70vw;
+  text-align: center;
+  color: var(--color-primary);
+}
+.ar.OverlayText,
+.ar.CS1CTitle,
+.ar.CS1Content,
+.ar.CP2P1,
+.ar.CP2P2 {
+  font-family: CairoM;
+}
+@media (max-width: 768px) {
+  .OverlayText {
+    top: 15%;
+    font-size: var(--PMGR-24px);
+  }
+  .ContactCardsWrapper {
+    left: 48.5%;
+    top: 70%;
+    flex-direction: column;
+    gap: 3vw;
+    justify-content: space-between;
+    width: 85vw;
+  }
+  .ar.ContactCardsWrapper {
+    left: 52%;
+  }
+  .ContS1Card {
+    width: 80vw;
+  }
+
+  .ContS1Card .CS1CIcon {
+    width: 7vw;
+  }
+  .CP2P1 {
+    padding-top: 5vw;
+    width: 80vw;
+  }
+  .CP2P2 {
+    width: 80vw;
+  }
+}

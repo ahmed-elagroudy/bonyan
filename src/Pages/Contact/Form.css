@@ -1,0 +1,336 @@
+.FormWebContainer {
+  display: flex;
+  width: 80vw;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--gap-section-24px);
+  position: relative;
+  background: #f5f5f5;
+  padding: var(--PMGR-32px);
+  border-radius: var(--PMGR-28px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+}
+.FormWTC {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--PMGR-48px);
+}
+.ar.FormWTC {
+  flex-direction: row-reverse;
+}
+.FormWP1 {
+  display: flex;
+  flex-direction: column;
+  gap: var(--PMGR-24px);
+  width: 36.5vw;
+}
+.InputFieldBox {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: var(--PMGR-8px);
+  width: 100%;
+}
+.ar.InputFieldBox {
+  align-items: flex-end;
+}
+.IFBT {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 0.5vw;
+}
+.ar.IFBT {
+  flex-direction: row-reverse;
+}
+.IFBI {
+  display: flex;
+  padding: var(--PMGR-16px);
+  align-items: center;
+  gap: var(--PMGR-8px);
+  align-self: stretch;
+  border-radius: var(--PMGR-16px);
+  border: 1px solid #cccccc;
+  background: var(--color-primary);
+  background: #ffffff;
+  width: 34.5vw;
+  text-align: left;
+}
+
+textarea {
+  min-width: 74vw;
+  width: 74vw;
+  max-width: 74vw;
+  resize: none;
+  display: flex;
+  flex: 1 1 0;
+  align-self: stretch;
+  height: 15vw;
+}
+.IFBI:active,
+.IFBI:focus {
+  outline: 1px solid #db952e;
+}
+
+.IFBI::placeholder {
+  overflow: hidden;
+  color: #3e5636;
+  text-overflow: ellipsis;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+.IFBI:-webkit-autofill {
+  background-color: #fff !important;
+  box-shadow: 0 0 0px 100px #fff inset !important;
+  border: 1px solid var(--color-primary-light) !important;
+  color: var(--color-primary) !important;
+  -webkit-text-fill-color: #3e5636;
+}
+
+.FormWSubmit {
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+  width: 100%;
+  padding-top: 3vw;
+  margin-left: -3vw;
+}
+.ar.FormWSubmit {
+  justify-content: flex-start;
+}
+.FromWsubmitB {
+  display: flex;
+  align-items: center;
+  display: flex;
+  padding: 1.1vw 2vw;
+  padding-left: 2.3vw;
+  align-items: center;
+  gap: var(--PMGR-8px);
+  border-radius: var(--PMGR-16px);
+  background: var(--color-secondary);
+  border: none;
+  cursor: pointer;
+  text-transform: uppercase;
+  color: #fff;
+  gap: 1vw;
+}
+.FiledBoxContainer {
+  position: relative;
+}
+.error-message,
+.error-message_Last {
+  color: red;
+  font-size: 1vw;
+  position: absolute;
+  right: 0;
+}
+.error-message_Last {
+  position: absolute;
+  bottom: -6%;
+  right: -110%;
+  color: red;
+  font-size: 1vw;
+}
+.IFBTN,
+.IFBTR {
+  color: #db952e;
+}
+.ar.IFBTN,
+.ar.IFBTR,
+.ar.IFBI,
+.ar.IFBI::placeholder,
+.ar.FromWsubmitB,
+.ar.error-message,
+.ar.error-message_Last {
+  font-family: CairoM;
+  text-align: right;
+}
+.ar.error-message_Last {
+  right: 0;
+}
+
+.captchaModal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  background-color: rgba(0, 0, 0, 0.3);
+}
+.captchaModalContent {
+  display: flex;
+  width: 26vw;
+  padding: 2.7vw 2vw 2.7vw 2vw;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-radius: var(--PMGR-24px);
+  background: var(--White, #fff);
+  box-shadow: 0px 2px 20px 0px rgba(33, 58, 104, 0.1);
+}
+.CaptchaQAContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: var(--PMGR-24px);
+}
+.CaptchaQuestion {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.CaptchaAnswerF {
+  display: flex;
+  gap: 1.5vw 2.5vw;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  gap: var(--PMGR-8px);
+  border-radius: var(--PMGR-16px);
+  background: var(--halftone-2, #f5f5f5);
+  border: none;
+  width: 5vw;
+  height: 4.5vw;
+  color: #3e5636;
+}
+.CaptchaAnswerF::placeholder,
+.CaptchaAnswerF:active,
+.CaptchaAnswerF:focus,
+.CaptchaAnswerF:visited {
+  outline: none;
+  color: #3e5636;
+}
+.CaptchaQ,
+.CaptchaAA {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+  gap: var(--PMGR-24px);
+}
+.CaptchaBB {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--PMGR-16px);
+}
+.CaptchaC,
+.CaptchaV,
+.CaptchaSubB {
+  display: flex;
+  padding: 1.15vw 0;
+  justify-content: center;
+  align-items: center;
+  gap: var(--PMGR-8px);
+  border-radius: var(--PMGR-16px);
+  width: 10vw;
+  border: none;
+  cursor: pointer;
+}
+.CaptchaQP1,
+.CaptchaQP2 {
+  color: #3e5636;
+}
+.CaptchaC {
+  background: #f5f5f5;
+  color: #f00;
+}
+.CaptchaV,
+.CaptchaSubB {
+  background: var(--blue, #db952e);
+  color: #fff;
+}
+.ar.CaptchaQP1 {
+  font-family: var(CairoM);
+}
+.ar.CaptchaQP2,
+.ar.CaptchaC,
+.ar.CaptchaV {
+  font-family: var(CairoM);
+}
+.CaptchaSubmit {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: var(--border-radius-16px);
+}
+.ar.CPLoading,
+.ar.CPMessage,
+.ar.CaptchaSubB {
+  font-family: var(CairoM);
+}
+
+@media (max-width: 768px) {
+  .FormWebContainer {
+    width: 90vw;
+    padding: var(--gap-section-40px) var(--gap-section-24px);
+  }
+  .FormWTC,
+  .ar.FormWTC {
+    flex-direction: column;
+    gap: var(--gap-section-24px);
+    width: 100%;
+  }
+  .FormWP1,
+  .ar.FormWP1 {
+    width: 100%;
+  }
+  .InputMob {
+    width: 100%;
+  }
+  .IFBI {
+    width: 100%;
+    padding: var(--border-radius-16px);
+  }
+  input {
+    height: 12.5vw;
+  }
+  textarea {
+    min-width: 34.5vw;
+    width: 100% !important;
+    max-width: 100% !important;
+    resize: none;
+    display: flex;
+    flex: 1 1 0;
+    align-self: stretch;
+    height: 60vw !important;
+  }
+  .FormWSubmit {
+    align-items: center;
+    justify-content: center;
+  }
+  .FromWsubmitB {
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    padding: var(--gap-section-16px) var(--gap-section-24px) var(--gap-section-16px) var(--gap-section-32px);
+  }
+  .captchaModalContent {
+    width: 90%;
+    padding: var(--border-radius-40px) var(--gap-section-24px);
+  }
+  .CaptchaV,
+  .CaptchaC,
+  .CaptchaAnswerF,
+  .CaptchaSubB {
+    width: 20vw;
+    padding: var(--gap-section-8px) var(--gap-section-16px);
+    height: 15vw;
+  }
+  .CaptchaV,
+  .CaptchaC,
+  .CaptchaSubB {
+    border-radius: var(--border-radius-24px);
+  }
+  .CaptchaQP2 {
+    width: 80%;
+  }
+}

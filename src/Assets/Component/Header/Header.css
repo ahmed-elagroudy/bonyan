@@ -1,0 +1,71 @@
+.HeadEn {
+  background-color: var(--color-primary);
+  padding: var(--PMGR-28px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: sticky;
+}
+.HeaderC {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 85vw;
+}
+.BLogo {
+  width: var(--PMGR-128px);
+}
+.HeadLinks {
+  display: flex;
+  gap: var(--PMGR-16px);
+  align-items: center;
+}
+.HeadLinks a,
+.HeadLinks a:active,
+.HeadLinks a:visited {
+  color: var(--color-white);
+  text-decoration: none;
+}
+.HP3Btn {
+  background-color: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--PMGR-8px);
+  border: none;
+  padding: var(--PMGR-4px) var(--PMGR-8px);
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+}
+.HP3BtnC {
+  gap: var(--PMGR-8px);
+  border: none;
+  color: #fff;
+  padding: var(--PMGR-8px) var(--PMGR-24px);
+  border-radius: var(--PMGR-28px);
+  background: linear-gradient(#3e5636, #3e5636) padding-box, linear-gradient(90deg, #db952e, #bcbec0, #db952e) border-box;
+  border: 2px solid transparent;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.HLImg {
+  width: 2vw;
+}
+.HeaderLC {
+  display: flex;
+  align-items: center;
+  gap: var(--PMGR-8px);
+}
+.active {
+  border-bottom: 1px solid #db952e;
+}
+.HeaderLaTAr {
+  font-family: CairoM;
+}
