@@ -1,0 +1,108 @@
+.ProjectS1 {
+  position: relative;
+  height: 25vw;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  padding: 0 7.5vw;
+  gap: 4vw;
+}
+
+.background-overlay {
+  position: absolute;
+  inset: 0;
+  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0.3) 60%, rgba(0, 0, 0, 0.6) 100%),
+    url(../../Assets/Images/ProjectsImg.webp);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  z-index: 0;
+}
+.CarS1P1,
+.CarS1P2 {
+  z-index: 1;
+}
+
+.ProjectsC {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: var(--PMGR-24px);
+}
+
+.ProjectsDis {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--PMGR-48px);
+  padding: var(--PMGR-24px) 0;
+  flex-wrap: wrap;
+}
+
+.BtnAnimation {
+  position: relative;
+  width: 12vw;
+  height: 3.6vw;
+  transition: 4s;
+  transform-style: preserve-3d;
+  transform: perspective(71vw) rotateX(0deg);
+}
+.BtnAnimation:hover {
+  transform: perspective(71vw) rotateX(360deg);
+}
+.BtnAnimation span {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #3e5636;
+  background: rgba(255, 255, 255, 0.9);
+  font-family: CairoM;
+  font-size: var(--PMGR-24px);
+  transition: 0.5s;
+  border: 2px solid #3e5636;
+  box-sizing: border-box;
+  box-shadow: insert 0 20px 50px rgba(0, 0, 0, 0.2);
+}
+.en.BtnAnimation span {
+  font-family: LeowB;
+  font-size: var(--PMGR-20px);
+}
+.BtnAnimation:hover span {
+  color: #fff;
+  background: #db952e;
+}
+.BtnAnimation span:nth-child(1) {
+  transform: rotateX(360deg) translateZ(1.775vw);
+}
+.BtnAnimation span:nth-child(2) {
+  transform: rotateX(270deg) translateZ(1.775vw);
+}
+.BtnAnimation span:nth-child(3) {
+  transform: rotateX(180deg) translateZ(1.775vw);
+}
+.BtnAnimation span:nth-child(4) {
+  transform: rotateX(90deg) translateZ(1.775vw);
+}
+@media (max-width: 768px) {
+  .BtnAnimation {
+    width: 40vw;
+    height: 10vw;
+  }
+  .BtnAnimation span:nth-child(1) {
+    transform: rotateX(360deg) translateZ(5vw);
+  }
+  .BtnAnimation span:nth-child(2) {
+    transform: rotateX(270deg) translateZ(5vw);
+  }
+  .BtnAnimation span:nth-child(3) {
+    transform: rotateX(180deg) translateZ(5vw);
+  }
+  .BtnAnimation span:nth-child(4) {
+    transform: rotateX(90deg) translateZ(5vw);
+  }
+}

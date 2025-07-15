@@ -1,0 +1,213 @@
+.CareersS1 {
+  height: 25vw;
+  background-image: url(../../Assets/Images/Careers.webp);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+  padding: 0 7.5vw;
+  gap: 4vw;
+}
+
+.CarS1P1 {
+  display: flex;
+  align-items: center;
+  padding-top: 5vw;
+  gap: 0.5vw;
+}
+.CarS1P1,
+.CarS1P1 a,
+.CarS1P1 a:active,
+.CarS1P1 a:visited {
+  color: var(--color-primary);
+  color: #db952e;
+  text-decoration: none;
+  font-family: LeowB2;
+}
+
+.CS1P1T {
+  margin-top: 0.2vw;
+}
+.CarS1P2 {
+  font-size: 4vw;
+  color: #db952e;
+}
+.CareersS2 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: var(--PMGR-64px);
+  padding: var(--PMGR-64px) 7.5vw;
+}
+.CarS2P1 {
+  font-family: LeowM;
+  text-align: center;
+  color: #3e5636;
+}
+.CarS2P2 {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 7.5vw;
+  width: 100%;
+}
+.CarS2P2L {
+  width: 40vw;
+}
+.CarS2P2R img {
+  width: 30vw;
+  border-radius: var(--PMGR-28px);
+}
+/*  */
+/*  */
+/*  */
+/*  */
+
+.CareersS3 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding-bottom: var(--PMGR-64px);
+}
+.CareersS3P1 {
+  display: flex;
+  padding: var(--PMGR-32px) var(--PMGR-24px);
+  justify-content: center;
+  align-items: center;
+  gap: var(--PMGR-16px);
+  color: #3e5636;
+}
+
+.CarS3P2 {
+  display: flex;
+  padding: var(--PMGR-16px);
+  align-items: center;
+  justify-content: center;
+  gap: var(--PMGR-24px);
+  background: #3e5636;
+  box-shadow: 0px 6px 0px 0px #db952e;
+  border-radius: var(--PMGR-28px);
+}
+.CarS3P2Box {
+  display: flex;
+  width: 25vw;
+  height: 40vh;
+  padding: var(--PMGR-24px) 0px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  gap: var(--PMGR-28px);
+  transition: all 0.3s ease;
+}
+
+.CarS3P2BImg {
+  width: 5vw;
+}
+.CarS3P2BT {
+  text-align: center;
+  color: #db952e;
+}
+.CarS3P2BD {
+  text-align: center;
+  color: #fff;
+  padding-top: 1.5vw;
+}
+
+@media (max-width: 768px) {
+  .CarS3P2 {
+    flex-direction: column;
+    padding: 40px 0;
+    gap: 40px;
+    width: 90vw;
+    /* box-shadow: none; */
+  }
+  .CarS3P2Box {
+    width: 100%;
+    height: 27vh;
+    padding: 8px 0px;
+  }
+  .CarS3P2BLine {
+    display: none;
+  }
+  .CarS3P2BImg {
+    width: 12vw;
+  }
+  .CarS3P2BD {
+    padding: 0px 20px;
+  }
+}
+.CareersS4 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: var(--PMGR-64px) 0;
+  gap: var(--PMGR-32px);
+}
+.CarS4P1T {
+  text-align: center;
+  color: #3e5636;
+}
+.CarS4P1D {
+  text-align: center;
+  width: 60vw;
+  color: #db952e;
+  padding-top: 1vw;
+}
+.ar.CarS1P1,
+.ar.CarS1P1 a,
+.ar.CarS1P1 a:active,
+.ar.CarS1P1 a:visited,
+.ar.CS1P1T,
+.ar.CarS1P2,
+.ar.CarS2P1,
+.ar.CarS2P2L,
+.ar.CareersS3P1,
+.ar.CarS3P2BT,
+.ar.CarS3P2BD,
+.ar.CarS4P1T,
+.ar.CarS4P1D {
+  font-family: CairoM;
+}
+@media (max-width: 768px) {
+  .CareersS1 {
+    height: 100vw;
+    align-items: center;
+    justify-content: center;
+  }
+  .CarS1P1 {
+    font-size: var(--PMGR-28px);
+    gap: var(--PMGR-24px);
+  }
+  .CarS1P2 {
+    font-size: var(--PMGR-48px);
+  }
+  .CarS2P2 {
+    flex-direction: column;
+    gap: var(--PMGR-32px);
+  }
+  .CarS2P2L {
+    text-align: center;
+    width: 80vw;
+  }
+  .CarS2P2R img {
+    width: 80vw;
+  }
+  .CareersS3P1 {
+    text-align: center;
+  }
+  .CarS4P1D {
+    width: 90vw;
+  }
+  .CarS4P1T {
+    width: 80vw;
+  }
+  .CarS4P1 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--PMGR-12px);
+  }
+}

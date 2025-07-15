@@ -38,9 +38,9 @@ export default function EnglishHeaderMobile() {
 
   const handleLanguageChange = () => {
     const currentPath = location.pathname;
-    const isArabic = currentPath.endsWith("/ar");
+    const isArabic = currentPath.endsWith("/en");
     const basePath = isArabic ? currentPath.slice(0, -3) : currentPath;
-    const newPath = isArabic ? basePath : `${basePath}${basePath.endsWith("/") ? "ar" : "/ar"}`;
+    const newPath = isArabic ? basePath : `${basePath}${basePath.endsWith("/") ? "en" : "/en"}`;
     navigate(newPath, { replace: true });
     setShowDropdown(false);
   };
@@ -60,7 +60,7 @@ export default function EnglishHeaderMobile() {
         <div className="Header_Main_Container">
           <div className="Header_Container" dir="rtl">
             <div className="Logo">
-              <Link to="/ar">
+              <Link to="/">
                 <img src={Logo} alt="Logo" className="Header_Logo_Mob" />
               </Link>
             </div>

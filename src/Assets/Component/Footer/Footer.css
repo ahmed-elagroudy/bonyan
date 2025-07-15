@@ -98,3 +98,71 @@
 .ar.FooterWebS3V2 {
   font-family: CairoL;
 }
+@media (max-width: 768px) {
+  .FooterEn {
+    padding: var(--PMGR-48px) 0;
+  }
+  .FooterWebS1 {
+    flex-direction: column;
+    align-items: center;
+    gap: var(--PMGR-24px);
+  }
+  .FooterWebS3V1Img {
+    width: 50vw;
+  }
+  .FooterMobS2 {
+    display: flex;
+    align-items: flex-start;
+    gap: var(--PMGR-48px);
+  }
+  .FooterMobS2L {
+    width: 0.5vw;
+    height: 40vw;
+    background-color: #db952e;
+  }
+  .FooterMobS3 {
+    display: flex;
+    align-items: flex-start;
+    gap: var(--PMGR-24px);
+  }
+  .FooterMobS3L {
+    width: 40vw;
+    height: 0.5vw;
+  }
+  .FooterWebS1V1 {
+    align-items: center;
+    text-align: center;
+  }
+  .FooterWebS3 {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    gap: var(--PMGR-32px);
+  }
+  .Footer_Soical {
+    gap: var(--PMGR-24px);
+  }
+  .Footer_Soical_Img {
+    width: 10vw;
+  }
+  .FooterWebS1V1 h3 {
+    margin: 0;
+  }
+  .ar.FooterMobS2L {
+    margin-top: -2vw;
+  }
+  .FooterMobS2 {
+    padding: var(--PMGR-32px) 0;
+  }
+  .FooterWebS1V1,
+  .FooterWebS3V2,
+  .FooterWebS3V2,
+  .ar.FooterWebS1V1 a,
+  .ar.FooterWebS1V1 a:active,
+  .ar.FooterWebS1V1 a:visited,
+  .ar.FooterWebS1V1,
+  .ar.FooterWebS3V2 {
+    font-size: var(--font-20px);
+  }
+}

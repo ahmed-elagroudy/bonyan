@@ -1,0 +1,56 @@
+.JobInputFieldBoxCV {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: var(--PMGR-8px);
+  width: 100%;
+}
+.ar.JobInputFieldBoxCV {
+  align-items: flex-end;
+}
+
+.JobIFBT {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 0.5vw;
+}
+.ar.JobIFBT {
+  flex-direction: row-reverse;
+}
+
+.JobIFBContent {
+  display: flex;
+  gap: var(--PMGR-16px);
+  padding-top: var(--PMGR-8px);
+}
+.ar.JobIFBContent {
+  flex-direction: row-reverse;
+}
+.JobIFBButton {
+  display: flex;
+  padding: var(--PMGR-16px);
+  padding: 0 1.5vw;
+  align-items: center;
+  gap: var(--PMGR-8px);
+  align-self: stretch;
+  border-radius: var(--PMGR-16px);
+  background: var(--blue, #db952e);
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  text-transform: uppercase;
+}
+.ar.JobIFBButton {
+  font-family: var(--font-Rubik-Ar);
+  width: 10vw;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+@media (max-width: 768px) {
+  .ar.JobIFBButton {
+    width: 22vw;
+  }
+}

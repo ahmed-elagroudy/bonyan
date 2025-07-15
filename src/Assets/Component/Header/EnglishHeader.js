@@ -1,7 +1,7 @@
 import "./Header.css";
 import { useLocation, useNavigate, Link } from "react-router-dom";
 import BLogo from "../../Svg/BLogoW.svg";
-import GLIcon from "../../Images/GlobalLang.png";
+import GLIcon from "../../Images/GlobalLang.webp";
 import { menu, contactLink } from "./HeaderData";
 
 export default function EnglishHeader() {
@@ -11,10 +11,15 @@ export default function EnglishHeader() {
 
   const handleLanguageChange = () => {
     const currentPath = location.pathname;
-    const isArabic = currentPath.endsWith("/ar");
-    const basePath = isArabic ? currentPath.slice(0, -3) : currentPath;
-    const newPath = isArabic ? basePath : `${basePath}${basePath.endsWith("/") ? "ar" : "/ar"}`;
-    navigate(newPath, { replace: true });
+    const isArabic = currentPath.includes("/en");
+
+    if (isArabic) {
+      const basePath = currentPath.slice(0, -3);
+
+      const newPath = basePath === "" ? "/" : basePath;
+
+      navigate(newPath, { replace: true });
+    }
   };
 
   return (
@@ -22,7 +27,7 @@ export default function EnglishHeader() {
       <div className="HeadEn">
         <div className="HeaderC">
           <div>
-            <Link to="/">
+            <Link to="/en">
               <img src={BLogo} alt="" className="BLogo" />
             </Link>
           </div>

@@ -1,0 +1,190 @@
+.ProjectContainer {
+  background-color: aliceblue;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-bottom: var(--PMGR-48px);
+}
+.ar.ProjectContainer {
+  gap: var(--PMGR-48px);
+}
+.ProjectDisP1 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: var(--PMGR-48px);
+}
+.ar.ProjectDisP1 {
+  padding-top: 0;
+}
+.ProDisP1Title {
+  color: #3e5636;
+  font-size: var(--font-32px);
+}
+.ProjectDisP2 {
+  display: flex;
+  flex-direction: column;
+  padding: var(--PMGR-48px);
+  gap: var(--PMGR-24px);
+}
+.ProDisP2Title {
+  color: #3e5636;
+  font-size: var(--font-32px);
+}
+
+.ProDisP2Desc {
+  color: #3e5636;
+}
+
+.ProjectDisP3 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--PMGR-32px);
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding: 2vw 5vw;
+}
+/* ProjectCard */
+.ProjectCardC {
+  background-color: transparent;
+  padding: var(--PMGR-40px) var(--PMGR-32px);
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  position: relative;
+  width: 15vw;
+  height: 4.5vw;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+  border-radius: var(--PMGR-28px);
+}
+
+.ProCardLabel {
+  display: flex;
+  align-items: center;
+  font-weight: bold;
+  letter-spacing: 1px;
+  color: #3e5636;
+  padding-left: 2vw;
+}
+.ProCardLine {
+  width: var(--PMGR-48px);
+  height: 2px;
+  background-color: #3e5636;
+  margin-right: 10px;
+  position: absolute;
+  left: -1.6vw;
+}
+.ar.ProCardLine {
+  left: auto;
+  right: -2.2vw;
+}
+.ProCardTitle {
+  text-transform: uppercase;
+}
+
+.ProCardValue {
+  color: #3e5636;
+  padding-left: 2vw;
+}
+.ar.ProCardLabel,
+.ar.ProCardValue {
+  padding-right: 1vw;
+  padding-left: 0;
+}
+/* for hover */
+.ProjectCardC:hover {
+  background-color: #db952e;
+  box-shadow: rgba(156, 12, 12, 0.25) 0px 30px 60px -12px inset, rgba(25, 9, 116, 0.3) 0px 18px 36px -18px inset;
+}
+.ProjectCardC:hover .ProCardLabel,
+.ProjectCardC:hover .ProCardValue {
+  color: #fff;
+}
+
+.ProS1P1TF {
+  display: flex;
+  align-items: center;
+  padding-top: 5vw;
+  gap: 0.5vw;
+  z-index: 3;
+}
+.ProS1P1TF,
+.ProS1P1TF a,
+.ProS1P1TF a:active,
+.ProS1P1TF a:visited {
+  color: var(--color-primary);
+  color: #db952e;
+  text-decoration: none;
+  font-family: LeowB2;
+}
+
+.ProS1P1TF2 {
+  font-size: 4vw;
+  color: #db952e;
+  z-index: 3;
+}
+
+.ar.ProDisP1Title,
+.ar.ProDisP2Title,
+.ar.ProDisP2Desc,
+.ar.ProCardTitle,
+.ar.ProCardValue,
+.ar.ProS1P1TF,
+.ar.ProS1P1TF a,
+.ar.ProS1P1TF a:active,
+.ar.ProS1P1TF a:visited,
+.ar.ProS1P1TF2 {
+  font-family: CairoM;
+}
+@media (max-width: 768px) {
+  .ProjectS1 {
+    height: 100vw;
+    align-items: center;
+    justify-content: center;
+  }
+  .ProDisP1Title {
+    font-size: var(--font-24px);
+    padding-bottom: 5vw;
+  }
+  .ProjectDisP2 {
+    padding: var(--PMGR-24px);
+    align-items: center;
+    justify-content: center;
+  }
+  .ProDisP2Title {
+    font-size: var(--font-24px);
+  }
+  .ProDisP2Desc {
+    font-size: var(--font-16px);
+    text-align: center;
+  }
+  .ProjectDisP3 {
+    flex-direction: column;
+  }
+  .ProjectCardC {
+    width: 50vw;
+    height: 10vw;
+    align-items: center;
+  }
+  .ar.ProjectCardC {
+    height: 15vw;
+  }
+  .ProCardLine {
+    left: -5vw;
+  }
+  .ar.ProCardLine {
+    right: -7vw;
+  }
+  .ProS1P1TF {
+    font-size: var(--font-16px);
+    gap: var(--PMGR-24px);
+    width: 100vw;
+    align-items: center;
+    justify-content: center;
+  }
+  .ProS1P1TF2 {
+    font-size: var(--PMGR-28px);
+    text-align: center;
+  }
+}

@@ -10,7 +10,6 @@ export default function EnglishHeaderMobile() {
   const [showDropdown, setShowDropdown] = useState(false);
   const location = useLocation();
   const navigate = useNavigate();
-
   const menuRef = useRef(null);
   const buttonRef = useRef(null);
 
@@ -38,9 +37,9 @@ export default function EnglishHeaderMobile() {
 
   const handleLanguageChange = () => {
     const currentPath = location.pathname;
-    const isArabic = currentPath.endsWith("/ar");
+    const isArabic = currentPath.endsWith("/en");
     const basePath = isArabic ? currentPath.slice(0, -3) : currentPath;
-    const newPath = isArabic ? basePath : `${basePath}${basePath.endsWith("/") ? "ar" : "/ar"}`;
+    const newPath = isArabic ? basePath : `${basePath}${basePath.endsWith("/") ? "en" : "/en"}`;
     navigate(newPath, { replace: true });
     setShowDropdown(false);
   };
@@ -60,7 +59,7 @@ export default function EnglishHeaderMobile() {
         <div className="Header_Main_Container">
           <div className="Header_Container">
             <div className="Logo">
-              <Link to="/">
+              <Link to="/en">
                 <img src={Logo} alt="Logo" className="Header_Logo_Mob" />
               </Link>
             </div>

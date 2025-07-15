@@ -11,17 +11,18 @@ import EnglishFooterMobile from "./Assets/Component/Footer/EnglishFooterMobile";
 import ArabicFooterMobile from "./Assets/Component/Footer/ArabicFooterMobile";
 import ScrollToTop from "./Assets/Hooks/ScrollUp/ScrollUp";
 import RoutePages from "./RoutePages";
+import ProjectPage from "./Assets/Component/ProjectComponent/ProjectPage";
 
 export default function MainRoutes() {
   const location = useLocation();
-  const isArabic = location.pathname.endsWith("/ar");
+  const isEnglish = location.pathname.includes("/en");
 
   const [isSmallScreen, setIsSmallScreen] = useState(window.innerWidth < 768);
 
   useEffect(() => {
-    const basePath = isArabic ? (location.pathname === "/ar" ? "/" : location.pathname.replace(/\/ar$/, "")) : location.pathname;
+    const basePath = location.pathname.replace(/\/en$/, "");
     const route = RoutePages.find((r) => r.path === basePath);
-    document.title = route ? (isArabic ? route.arTitle : route.enTitle) : isArabic ? "يونيفورم ارينا" : "Bonyan";
+    document.title = route ? (isEnglish ? route.enTitle : route.arTitle) : isEnglish ? "Bonyan" : "بنيان";
   }, [location]);
 
   useEffect(() => {
@@ -32,18 +33,24 @@ export default function MainRoutes() {
     return () => window.removeEventListener("resize", handleResize);
   }, [location.pathname]);
 
-  const HeaderComponent = isSmallScreen ? (isArabic ? ArabicHeaderMobile : EnglishHeaderMobile) : isArabic ? ArabicHeader : EnglishHeader;
-  const FooterComponent = isSmallScreen ? (isArabic ? ArabicFooterMobile : EnglishFooterMobile) : isArabic ? ArabicFooter : EnglishFooter;
+  const HeaderComponent = isSmallScreen ? (isEnglish ? EnglishHeaderMobile : ArabicHeaderMobile) : isEnglish ? EnglishHeader : ArabicHeader;
+
+  const FooterComponent = isSmallScreen ? (isEnglish ? EnglishFooterMobile : ArabicFooterMobile) : isEnglish ? EnglishFooter : ArabicFooter;
 
   const renderRoutes = (routes) => (
     <div data-scroll-section>
       <Routes>
-        {routes.map(({ path, enComponent, arComponent }, index) => (
-          <Route key={index} path={path} element={isArabic ? arComponent : enComponent} />
+        {routes.map(({ path, enComponent }, index) => (
+          <Route key={`en-${index}`} path={`${path}/en`} element={enComponent} />
         ))}
+
         {routes.map(({ path, arComponent }, index) => (
-          <Route key={`ar-${index}`} path={`${path}/ar`} element={arComponent} />
+          <Route key={index} path={path} element={arComponent} />
         ))}
+
+        <Route path="/:projectId/en" element={<ProjectPage lang="en" />} />
+        <Route path="/:projectId" element={<ProjectPage lang="ar" />} />
+
         <Route path="*" element={<Navigate to="/" replace />} />
       </Routes>
     </div>

@@ -12,7 +12,7 @@ body {
 }
 @font-face {
   font-family: LeowB2;
-  src: url(./Assets/Fonts/Leow/Loew-Bold-1.otf);
+  src: url(./Assets/Fonts/Leow/Loew-ExtraBold.otf);
 }
 @font-face {
   font-family: LeowM;
@@ -47,17 +47,24 @@ body {
   /*  */
   /* Fonts Size */
   /* Font Sizes (Default) */
+  --font-8px: 0.568vw; /* 8px */
+  --font-12px: 0.852vw; /* 12px */
+  --font-14px: 0.994vw; /* 16px */
   --font-16px: 1.13vw; /* 16px */
+  --font-18px: 1.278vw; /* 16px */
   --font-20px: 1.42vw; /* 20px */
   --font-24px: 1.704vw; /* 24px */
   --font-32px: 2.272vw; /* 32px */
   --font-48px: 3.408vw; /* 48px */
+  --font-54px: 3.834vw; /* 48px */
+  --font-64px: 4.554vw; /* 64px */
   /*  */
   /*  */
   /* Space */
   /* GapBetween Sections  */
   --PMGR-4px: 0.284vw;
   --PMGR-8px: 0.568vw;
+  --PMGR-12px: 0.852vw;
   --PMGR-16px: 1.31vw;
   --PMGR-20px: 1.42vw;
   --PMGR-24px: 1.704vw;
@@ -66,7 +73,7 @@ body {
   --PMGR-40px: 2.84vw;
   --PMGR-48px: 3.408vw;
   --PMGR-64px: 4.554vw;
-  --PMGR-108px: 7.7vw;
+  --PMGR-96px: 6.816vw;
   --PMGR-128px: 9.088vw;
 }
 
@@ -153,26 +160,33 @@ body {
     /*  */
     /* Fonts Size */
     /* Font Sizes (Default) */
+    --font-8px: 1.856vw; /* 8px */
+    --font-12px: 2.784vw; /* 12px */
+    --font-14px: 3.248vw; /* 16px */
     --font-16px: 3.712vw; /* 16px */
+    --font-18px: 4.176vw; /* 18px */
     --font-20px: 4.64vw; /* 20px */
-    --font-24px: 5.56vw; /* 24px */
+    --font-24px: 5.568vw; /* 24px */
     --font-32px: 7.424vw; /* 32px */
     --font-48px: 11.136vw; /* 48px */
+    --font-54px: 12.528vw; /* 48px */
+    --font-64px: 14.848vw; /* 64px */
     /*  */
     /*  */
     /* Space */
     /* GapBetween Sections  */
     --PMGR-4px: 0.928vw;
     --PMGR-8px: 1.856vw;
+    --PMGR-12px: 2.784vw;
     --PMGR-16px: 3.712vw;
     --PMGR-20px: 4.64vw;
-    --PMGR-24px: 5.56vw;
+    --PMGR-24px: 5.568vw;
     --PMGR-28px: 6.496vw;
     --PMGR-32px: 7.424vw;
     --PMGR-40px: 9.28vw;
     --PMGR-48px: 11.136vw;
     --PMGR-64px: 14.848vw;
-    --PMGR-108px: 25vw;
+    --PMGR-96px: 22.272vw;
     --PMGR-128px: 29.696vw;
   }
 }

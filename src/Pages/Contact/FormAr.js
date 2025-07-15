@@ -1,5 +1,5 @@
 import React, { useState, useRef, useEffect } from "react";
-import emailjs from "@emailjs/browser";
+import axios from "axios";
 import FormIcon from "../../Assets/Svg/Form/FormIcon.svg";
 import "./Form.css";
 
@@ -101,12 +101,14 @@ export default function FormWebAr() {
     setIsCaptchaOpen(true);
   };
 
+  const apiKey = process.env.REACT_APP_BREVO_API_KEY;
+
   const verifyCaptchaAndSendEmail = async () => {
     const captchaValues = captcha.split(" + ").map(Number);
     const correctCaptchaAnswer = captchaValues[0] + captchaValues[1];
 
     if (parseInt(userCaptchaInput) !== correctCaptchaAnswer) {
-      alert("فشل التحقق يُرجى المحاولة مرة أخرى.");
+      alert("Captcha verification failed. Please try again.");
       return;
     }
 
@@ -114,24 +116,75 @@ export default function FormWebAr() {
 
     try {
       const form = formRef.current;
+      const formData = new FormData(form);
+      const emailData = {
+        sender: { name: formData.get("user_name"), email: "bonyan.group.dev@gmail.com" },
+        to: [{ email: "ahmedelagrode7@gmail.com" }],
+        subject: formData.get("user_name"),
+        htmlContent: `
+        <div style="font-family: Arial, sans-serif; line-height: 1.6; color: #000;">
+          <p>Hello <strong style="color: #0000FF;">Bonyan Team</strong>,</p>
+          <p>You got a New Contact from <strong>${formData.get("user_name")}</strong></p>
+          <table style="width: 50%; border-collapse: collapse; border: 1px solid #000;">
+            <tr>
+              <td style="border: 1px solid #000; padding: 8px;"><strong>Name</strong></td>
+              <td style="border: 1px solid #000; padding: 8px;">${formData.get("user_name")}</td>
+            </tr>
+            <tr>
+              <td style="border: 1px solid #000; padding: 8px;"><strong>Email</strong></td>
+              <td style="border: 1px solid #000; padding: 8px;">${formData.get("user_email")}</td>
+            </tr>
+            <tr>
+              <td style="border: 1px solid #000; padding: 8px;"><strong>Phone Number</strong></td>
+              <td style="border: 1px solid #000; padding: 8px;">${formData.get("user_phone")}</td>
+            </tr>
+            <tr>
+              <td style="border: 1px solid #000; padding: 8px;"><strong>subject</strong></td>
+              <td style="border: 1px solid #000; padding: 8px;">${formData.get("user_subject")}</td>
+            </tr>
+            <tr>
+              <td style="border: 1px solid #000; padding: 8px;"><strong>Message</strong></td>
+              <td style="border: 1px solid #000; padding: 8px;">${formData.get("user_message")}</td>
+            </tr>
+            
+          </table>
+          <p>Best wishes,<br><strong style="color: #0000FF;">Bonyan Team</strong></p>
+        </div>
+      `,
+      };
 
-      const result = await emailjs.sendForm(
-        "service_txje3pa", // Service ID
-        "template_yw09isg", // Template ID
-        form,
-        "zdd815XBR2AMi8FAc" // Public Key (User ID)
-      );
+      const response = await axios.post("https://api.brevo.com/v3/smtp/email", emailData, {
+        headers: {
+          accept: "application/json",
+          "api-key": apiKey,
+          "content-type": "application/json",
+        },
+      });
 
-      console.log("EmailJS Result:", result.text);
-      setIsSuccess(true);
-      generateCaptcha();
+      if (response.status === 201) {
+        setIsSuccess(true);
+        generateCaptcha();
+      } else {
+        throw new Error("Failed to send email.");
+      }
 
       setCaptcha("");
       setUserCaptchaInput("");
       form.reset();
     } catch (error) {
-      console.error("EmailJS Error:", error);
-      alert("فشل إرسال البريد الإلكتروني. يُرجى المحاولة لاحقًا.");
+      console.error("Brevo API Error:", error);
+
+      if (error.response) {
+        console.log("Status:", error.response.status);
+        console.log("Headers:", error.response.headers);
+        console.log("Data:", error.response.data);
+      } else if (error.request) {
+        console.log("Request:", error.request);
+      } else {
+        console.log("Error Message:", error.message);
+      }
+
+      alert("Failed to send email. Please try again later.");
     } finally {
       setIsLoading(false);
     }

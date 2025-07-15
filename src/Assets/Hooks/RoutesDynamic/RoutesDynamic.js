@@ -1,18 +1,35 @@
-// RoutesEn
-export const RoutesEn = {
-  Home: "/",
-  About: "/About-us",
-  Projects: "/Projects",
-  Careers: "/Career",
-  Contact: "/Contact-us",
+import projectData from "../../../Pages/ProjectData/ProjectData";
+
+// here to add new path
+const staticRoutes = {
+  Home: "",
+  About: "About-us",
+  Projects: "Projects",
+  Careers: "Career",
+  Contact: "Contact-us",
 };
 
-// RoutesAr
+export const Routes = {};
+export const RoutesAr = {};
+export const RoutesEn = {};
 
-export const RoutesAr = {
-  Home: "/ar",
-  About: "/About-us/ar",
-  Projects: "/Projects/ar",
-  Careers: "/Career/ar",
-  Contact: "/Contact-us/ar",
-};
+// Generate static routes
+for (const key in staticRoutes) {
+  RoutesAr[key] = staticRoutes[key] === "" ? "/" : `/${staticRoutes[key]}`;
+  RoutesEn[key] = staticRoutes[key] === "" ? "/en" : `/${staticRoutes[key]}/en`;
+  Routes[key] = {
+    ar: RoutesAr[key],
+    en: RoutesEn[key],
+  };
+}
+
+// Generate dynamic project routes
+projectData.forEach((proj) => {
+  const id = proj.id;
+  RoutesAr[id] = `/${id}`;
+  RoutesEn[id] = `/${id}/en`;
+  Routes[id] = {
+    ar: `/${id}`,
+    en: `/${id}/en`,
+  };
+});
